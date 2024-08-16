@@ -1,0 +1,53 @@
+@import "../../../scss/variables";
+@import "../../../scss/mixins";
+
+.img {
+  @include img_fluid;
+}
+
+.vr {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  .container {
+    flex: 1;
+  }
+
+  @media screen and (min-width: 992px) {
+    flex-direction: row-reverse;
+    align-items: center;
+    margin: 30px auto 5rem;
+  }
+  &_header {
+    text-align: center;
+    margin-bottom: 3rem;
+    @media screen and (min-width: 992px) {
+      text-align: left;
+      padding: 0 5rem;
+    }
+    h3 {
+      font-size: 34px;
+      margin: 1rem 0;
+      @media screen and (min-width: 992px) {
+        font-size: 48px;
+      }
+    }
+    p {
+      // font-size: 18px;
+      line-height: 180%;
+    }
+
+    &_buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      @media screen and (min-width: 992px) {
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+    }
+  }
+}

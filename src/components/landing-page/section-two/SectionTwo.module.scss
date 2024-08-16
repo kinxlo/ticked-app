@@ -1,0 +1,88 @@
+@import "../../../scss/variables";
+@import "../../../scss/mixins";
+
+.icon_wrapper {
+  border: 1px solid #d3d3d360;
+  border-radius: 16px;
+  width: 9rem;
+  height: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__two {
+  text-align: center;
+
+  header {
+    @include container-md;
+    .section__two_title {
+      font-weight: 700;
+      line-height: 160%;
+      margin-bottom: 1rem;
+      @include header-font;
+
+      .section__two_task {
+        color: $accentOrange;
+      }
+    }
+    .section__two_subtitle {
+      font-size: 16px;
+      line-height: 180%;
+      @media (min-width: 992px) {
+        font-size: 20px;
+        padding: 0 2rem;
+      }
+    }
+  }
+
+  .taskDisplay {
+    @include container-md;
+    margin-top: 3rem;
+    position: relative;
+    .float_icon_1,
+    .float_icon_2 {
+      position: absolute;
+      background-color: $white;
+    }
+
+    .float_icon_1 {
+      left: -5%;
+      bottom: -10%;
+      transform: scale(0.4);
+      @media (min-width: 992px) {
+        transform: scale(1);
+        left: 7%;
+        bottom: 15%;
+      }
+    }
+
+    .float_icon_2 {
+      right: 0;
+      top: -5%;
+      transform: scale(0.4);
+      @media (min-width: 992px) {
+        transform: scale(1);
+        right: 10%;
+        top: -5%;
+      }
+    }
+    .assistant {
+      @media (min-width: 992px) {
+        // margin-top: -10rem;
+      }
+    }
+  }
+
+  .howitworksBtn {
+    text-align: left;
+    @media (min-width: 992px) {
+      margin-left: 4rem;
+    }
+    p {
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: $black;
+    }
+  }
+}

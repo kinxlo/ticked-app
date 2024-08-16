@@ -1,0 +1,41 @@
+@import "../../../scss/variables";
+@import "../../../scss//mixins";
+
+.vr {
+  position: relative;
+  // border: 1px solid red;
+  // height: 45rem;
+  overflow: hidden;
+
+  &_header {
+    @include container-md;
+    text-align: center;
+
+    h3 {
+      @include header-font;
+      margin: 1rem 0;
+    }
+    p {
+      // font-size: 18px;
+      line-height: 180%;
+    }
+
+    &_buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0;
+    }
+  }
+
+  .banner {
+    @media (min-width: 992px) {
+      @include container-fluid;
+    }
+  }
+
+  .imgWrapper {
+    width: fit-content;
+    margin: auto;
+  }
+}

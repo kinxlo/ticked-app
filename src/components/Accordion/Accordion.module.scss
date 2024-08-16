@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,700&display=swap');
+
+
+.taskListMobile:first-child {
+    border-radius: 13px 15px 0px 0px;
+}
+
+@media screen and (max-width:720px) {
+    .taskList,.taskListMobile{
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+}
+@media screen and (max-width:700px) {
+    .skeleton{
+                        flex-direction: column;
+                        align-items:  flex-start !important;
+    }                    
+  }
+                        
+.task__status{
+             padding: 10px;  
+//              background-color:#53c41a1c ;   
+             background-color:#52C41A ;   
+             border-radius: 5px;  
+             color: #fff;  
+             width:100px;
+             margin-bottom: 10px;
+}
+.task__status, .task__total, .due__date{
+                      font-size: 14px;
+                        font-family: Lato ,'sans-serif' !important;
+                        text-transform:capitalize;
+}
+.due__date{
+           margin-right: 70px;           
+}
+.task__name{
+                      padding: 9px 10px;
+                     font-size: 14px;
+                       font-family: Lato ,'sans-serif' !important;
+                       text-transform:capitalize;
+                     font-weight: 600;
+                     color: 714DD9;
+}
+.task__name.darker,.task__date.darker {
+                 
+                     color: #000;
+}
+.task__date{
+                       color: #714DD9;  
+                       font-size: 16px;
+                      //  margin-right: 50px;
+}
+.allTasks{
+
+  transform: translateX(-100vw) !important;
+  transition:all 1s ease;
+  position:absolute;
+  width:100%
+}
+.assigned{
+    transform: translateX(100vw) !important;
+    transition:all 1s ease;
+}
+
+.allTasks.active__tab,.assigned.active__tab{
+  transform:translateX(0) !important;
+}
+
+
+
+@media screen and (max-width:1037px) {
+                      .view {
+                                            
+                                            margin-right: 5px !important;
+                                        }
+                                        .task__date {
+                                         
+                                            font-size: 14px;
+                                              font-family: Lato ,'sans-serif' !important;
+                                              text-transform:capitalize;
+                                        }
+}
+@media screen and (max-width:708px) {
+                .info{
+                      flex-direction: column;
+                      align-items: flex-start !important;
+                      margin-left: 00 !important ; 
+                }
+                .task__name__v1{
+                       margin-left: 00 !important ; 
+                       padding: 0 !important;
+                       margin-bottom: 10px !important;
+                }
+}

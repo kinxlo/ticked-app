@@ -1,0 +1,27 @@
+@import "../../../scss/mixins";
+@import "../../../scss/variables";
+
+.header {
+  @include container;
+
+  h1 {
+    @include header-font;
+    text-transform: uppercase;
+    font-family: Open Sans;
+    .yellowText {
+      color: #fea759;
+    }
+  }
+  p {
+    text-align: justify;
+    line-height: 180%;
+  }
+
+  .img {
+    flex: 1;
+    height: 100%;
+    img {
+      @include img_fluid;
+    }
+  }
+}
